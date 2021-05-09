@@ -2,6 +2,7 @@ from flask import (
     Flask
 )
 import app.database.db_session as db_session
+import os
 
 
 def create_app():
@@ -26,5 +27,6 @@ def create_app():
 
 
 if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
     app = create_app()
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=port)
