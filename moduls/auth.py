@@ -1,13 +1,13 @@
 from flask import (
     Blueprint, render_template, redirect
 )
-from app.moduls.forms import (
+from moduls.forms import (
     LoginForm, RegistrationForm
 )
-from app.database.users import (
+from database.users import (
     User
 )
-from app.database.db_session import create_session
+from database.db_session import create_session
 from flask_login import LoginManager, login_required, login_user, logout_user
 
 

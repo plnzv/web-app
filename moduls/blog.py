@@ -1,16 +1,16 @@
 from flask import (
     Blueprint, render_template, request, redirect
 )
-from app.moduls.forms import (
+from moduls.forms import (
     AddArticleForm
 )
-from app.database.articles import (
+from database.articles import (
     Article
 )
-from app.database.users import (
+from database.users import (
     User
 )
-from app.database.db_session import create_session
+from database.db_session import create_session
 from flask_login import current_user
 from mammoth import convert_to_html
 
